@@ -8,35 +8,44 @@ import Services from './components/Services/Services';
 import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header/Header';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import { createContext } from 'react';
+import { useState } from 'react';
+
+export const MyContext = createContext('sharif')
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route exact path="/home">
-            <Home></Home>
-          </Route>
-          <Route exact path="/about">
-            <About></About>
-          </Route>
-          <Route exact path="/services">
-            <Services></Services>
-          </Route>
-          <Route exact path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
 
-      </Router>
-    </div>
+  const name = "Shariful islam"
+  return (
+    <MyContext.Provider value={name}>
+      <div className="App">
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
+            <Route exact path="/about">
+              <About></About>
+            </Route>
+            <Route exact path="/services">
+              <Services></Services>
+            </Route>
+            <Route exact path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </div>
+    </MyContext.Provider>
   );
 }
 
