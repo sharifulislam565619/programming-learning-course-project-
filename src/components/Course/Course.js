@@ -14,7 +14,7 @@ const Course = (props) => {
                 </div>
                 <div className="card-body">
                     <h3 className="card-title">{title}</h3>
-                    <h4><b>Price:</b> {price}</h4>
+                    <h5><b>Fee:</b> {price}</h5>
                     <p className="card-text">{desc.slice(0, 90)}</p>
                 </div>
                 <div>

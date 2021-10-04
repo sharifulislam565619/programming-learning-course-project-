@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const NotFound = () => {
     return (
         <div>
-            <div className="mars"></div>
+            <div className="mars py-3"></div>
             <img src="https://assets.codepen.io/1538474/404.svg" alt="..." className="logo-404" />
             <img src="https://assets.codepen.io/1538474/meteor.svg" alt="..." className="meteor" />
             <p className="title">Oh no!!</p>

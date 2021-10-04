@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Course from '../Course/Course';
+import Slider from '../Slider/Slider';
 
 const Home = () => {
 
@@ -14,14 +15,18 @@ const Home = () => {
             .then(data => setCourses(data))
     }, [])
     return (
-        <div className="row row-cols-1 row-cols-md-2 g-4 px-5 py-3 mx-5">
+        <>
+            <Slider></Slider>
+            <div className="row row-cols-1 row-cols-md-2 g-4 px-md-5 py-md-3 mx-md-5">
 
-            {
-                newCourses?.map(course => <Course
-                    key={course.id}
-                    course={course}></Course>)
-            }
-        </div>
+                {
+                    newCourses?.map(course => <Course
+                        key={course.id}
+                        course={course}></Course>)
+                }
+            </div>
+        </>
+
     );
 };
 
