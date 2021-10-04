@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -10,7 +9,7 @@ import Header from './components/Header/Header';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import { createContext } from 'react';
-import { useState } from 'react';
+
 
 export const MyContext = createContext('sharif')
 

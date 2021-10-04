@@ -6,7 +6,7 @@ import Course from '../Course/Course';
 const Home = () => {
 
     const [courses, setCourses] = useState([])
-    const newCourses = courses.slice(0, 6)
+    const newCourses = courses.slice(0, 4)
 
     useEffect(() => {
         fetch("https://raw.githubusercontent.com/sharifulislam565619/fakeData/main/fageData.json")
@@ -14,7 +14,7 @@ const Home = () => {
             .then(data => setCourses(data))
     }, [])
     return (
-        <div className="row row-cols-1 row-cols-md-3 g-4 p-3">
+        <div className="row row-cols-1 row-cols-md-2 g-4 px-5 py-3 mx-5">
 
             {
                 newCourses?.map(course => <Course
