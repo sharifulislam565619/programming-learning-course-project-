@@ -7,7 +7,7 @@ const Services = () => {
     const [courses, setCourses] = useState([])
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/sharifulislam565619/fakeData/main/fageData.json")
+        fetch("https://raw.githubusercontent.com/sharifulislam565619/fakeData/main/fakeData.json")
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
