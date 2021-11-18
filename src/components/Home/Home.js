@@ -1,6 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Course from '../Course/Course';
 import Slider from '../Slider/Slider';
 
@@ -10,7 +8,7 @@ const Home = () => {
     const newCourses = courses.slice(0, 4)
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/sharifulislam565619/fakeData/main/fageData.json")
+        fetch("https://raw.githubusercontent.com/sharifulislam565619/fakeData/main/fakeData.json")
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
